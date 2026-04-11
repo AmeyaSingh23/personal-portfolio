@@ -1,0 +1,145 @@
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+section {
+    height: 100vh;
+    padding: 50px;
+    scroll-margin-top: 80px;
+}
+
+/* navbar */
+.navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    background-color: #000000;
+    transition: all 0.6s ease;
+}
+
+/* default */
+.navbar .nav-links a, 
+.navbar .logo span {
+    color: white;
+}
+
+/* scrolled */
+.navbar.scrolled {
+    background-color: white;
+}
+
+/* text color when scrolled */
+.navbar.scrolled .nav-links a,
+.navbar.scrolled .logo span {
+    color: black;
+}
+
+/* container */
+.container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: auto;
+    max-width: 1100px;
+    width: 100%;
+    padding: 10px 20px;
+}
+
+/* logo */
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.logo img {
+    width: 45px;
+    height: 45px;
+    object-fit: cover;
+}
+
+.logo span {
+    font-size: 22px;
+    font-weight: 600;
+}
+
+/* nav links */
+.nav-links {
+    display: flex;
+    gap: 40px;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-links a {
+    text-decoration: none;
+    font-size: 14px;
+    letter-spacing: 1px;
+}
+
+/* hover */
+.nav-links a:hover {
+    opacity: 0.7;
+}
+
+/* sections */
+/* hero */
+.hero {
+    background-color: black;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    padding-top: 80px;
+}
+
+.hero-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.hero-text {
+    color: white;
+    max-width: 50%;
+}
+
+.hero-text .intro {
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+.hero-text h1 {
+    font-size: 60px;
+    line-height: 1.2;
+    margin: 20px 0;
+}
+
+.hero-text .description {
+    font-size: 16px;
+    color: #ccc;
+    margin-bottom: 20px;
+}
+
+.btn {
+    display: inline-block;
+    padding: 20px 25px;
+    background-color: tomato;
+    color: white;
+    text-decoration: none;
+    border-radius: 25px;
+}
+
+.hero-img img {
+    width: 400px;
+    height: 500px;
+    object-fit: cover;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(255, 255, 255, 0.2);
+}
