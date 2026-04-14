@@ -10,8 +10,10 @@
     <nav class="navbar">
         <div class="container">
             <div class="logo">
-                <img src="logo.jpg" alt="Ameya's Logo">
-                <span>Ameya</span>
+                <a href="index.html" class="logo-link">
+                    <img src="photo_ameya.jpg" alt="Ameya's Logo">
+                    <span>Ameya</span>
+                </a>
             </div>
             <div>
                 <ul class="nav-links">
@@ -42,19 +44,60 @@
             </div>
             <!-- right side -->
             <div class="hero-img">
-                <img src="logo.jpg" alt="hero image">
+                <img src="photo_ameya.jpg" alt="hero image">
             </div>
         </div>
     </section>
-    <section id="about">
-        <h2>About Me</h2>
+
+    <section id="about" class="about-section">
+        <h2 class="resume-title">RESUME</h2>
+        <!--pills-->
+        <div class="pill-container">
+            <button class="pill active" data-target="about-content">About Me</button>
+            <button class="pill" data-target="experience-content">Experience</button>
+            <button class="pill" data-target="education-content">Education</button>
+            <button class="pill" data-target="skills-content">Skills</button>
+        </div>
+        <!--content areas-->
+        <div class="pill-content active" id="about-content">
+            <div class="about-layout">
+                <div class="about-text">
+                    <h3>CS Student at BMSCE</h3>
+                    <p>I am a passionate Computer Science student with a strong foundation in programming and problem-solving. I enjoy working on innovative projects and continuously strive to improve my skills.</p>
+                    <div class="info-grid">
+                        <div><strong>Name</strong><span>:</span><span>Ameya Pratap Singh</span></div>
+                        <div><strong>Nationality</strong><span>:</span><span>Indian</span></div>
+                        <div><strong>Mobile</strong><span>:</span><span>9876543210</span></div>
+                        <div><strong>Email</strong><span>:</span><span>ameyapratp@gmail.com</span></div>
+                        <div><strong>Language</strong><span>:</span><span>English, Hindi</span></div>
+                        <div><strong>Freelance</strong><span>:</span><span>Available</span></div>
+                        <div><strong>LinkedIn</strong><span>:</span><span>linkedin.com/in/ameyapratap</span></div>
+                    </div>
+                </div>
+                <div class="about-image">
+                    <img src="photo_ameya.jpg" alt="my photo in about me section">
+                </div>
+            </div>
+        </div>
+        <div class="pill-content" id="experience-content">
+            <p>This is experience content.</p>
+        </div>
+        <div class="pill-content" id="education-content">
+            <p>This is education content.</p>
+        </div>
+        <div class="pill-content" id="skills-content">
+            <p>This is skills content.</p>
+        </div>
     </section>
+
     <section id="projects">
         <h2>Projects</h2>
     </section>
+
     <section id="contact">
         <h2>Contact</h2>
     </section>
+
     <script src="script.js"></script>
 </body>
 </html>

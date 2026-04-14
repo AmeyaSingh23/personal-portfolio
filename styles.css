@@ -3,7 +3,6 @@ html {
 }
 
 body {
-    margin: 0;
     font-family: Arial, sans-serif;
 }
 
@@ -38,6 +37,14 @@ section {
 .navbar.scrolled .nav-links a,
 .navbar.scrolled .logo span {
     color: black;
+}
+
+.logo-link {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    text-decoration: none;
+    color: inherit;
 }
 
 /* container */
@@ -142,4 +149,120 @@ section {
     object-fit: cover;
     border-radius: 20px;
     box-shadow: 0 10px 30px rgba(255, 255, 255, 0.2);
+}
+
+/* about */
+.about-section{
+    background-color: #b9b9b9;
+    text-align: center;
+}
+.resume-title{
+    display: inline-block;
+    padding: 10px 25px;
+    border-radius: 30px;
+    background: #ffffff;
+    border: 2px solid #cf8138;
+    color: #cf8138;
+    font-weight: 600;
+    letter-spacing: 1px;
+    margin: 0 auto 30px;
+}
+.pill-container{
+    display: flex;
+    background: #f1dfd4;
+    border-radius: 50px;
+    overflow: hidden;
+    width: 100%;
+}
+
+.pill{
+    flex: 1;
+    padding: 15px 0;
+    border: none;
+    background: transparent;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: bold;
+    border-radius: 50px;
+}
+
+.pill.active{
+    background: #e39a7a;
+}
+
+.pill-content{
+    display: none;
+    margin-top: 30px;
+}
+
+.pill-content.active{
+    display: block;
+}
+
+.about-layout{
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 40px;
+    margin-top: 40px;
+}
+
+.about-text{
+    width: 55%;
+    color: #333;
+    text-align: left;
+}
+
+.about-text h3 {
+    font-size: 28px;
+    margin-bottom: 15px;
+}
+
+.about-text p {
+    font-size: 15px;
+    line-height: 1.6;
+    margin-bottom: 10px;
+}
+
+.about-text p strong {
+    display: inline-block;
+    width: 120px;
+    font-weight: 600;
+}
+
+.info-grid div {
+    display: grid;
+    grid-template-columns: 140px 30px 1fr;
+    margin-bottom: 8px;
+    column-gap: 10px;
+}
+
+.info-grid div span:nth-child(2) {
+    text-align: center;
+}
+
+.info-grid strong {
+    font-weight: 600;
+}
+
+.about-image{
+    width: 40%;
+    display: flex;
+    justify-content: center;
+}
+
+.about-image img {
+    width: 100%;
+    max-width: 350px;
+    border-radius: 20px;
+    object-fit: cover;
+}
+
+@media (max-width: 900px) {
+    .about-layout {
+        flex-direction: column;;
+    }
+    .about-text, .about-image {
+        width: 100%;
+    }
 }
