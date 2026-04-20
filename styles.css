@@ -194,7 +194,7 @@ section {
 
 /* ===== ABOUT / RESUME ===== */
 .about-section {
-    background-color: #ffffff;
+    background-color: #e4e4e4;
     text-align: center;
 }
 
@@ -217,7 +217,7 @@ section {
     border-radius: 50px;
     overflow-x: auto;
     width: 100%;
-    max-width: 560px;  /* keeps pills from stretching too wide on desktop */
+    max-width: 768px;  /* keeps pills from stretching too wide on desktop */
     margin: 0 auto;
 }
 
@@ -232,7 +232,7 @@ section {
     border-radius: 50px;
     min-width: 100px;
     white-space: nowrap;
-    transition: background 0.2s;
+    transition: background 0.3s;
 }
 
 .pill.active {
@@ -299,7 +299,6 @@ section {
     flex: 1 1 240px;
     display: flex;
     justify-content: center;
-    max-width: 380px;
 }
 
 .about-image img {
@@ -307,6 +306,98 @@ section {
     max-width: 320px;
     border-radius: 20px;
     object-fit: cover;
+}
+
+.card-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: clamp(16px, 2vw, 32px);
+    margin-top: clamp(24px, 4vw, 48px);
+}
+
+.card {
+    background: #f8f8f8;
+    padding: clamp(16px, 2.5vw, 32px);
+    border-radius: 15px;
+    border: 1px solid #ddd;
+    transition: 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+}
+
+.card-yr {
+    font-size: clamp(12px, 1vw, 15px);
+    color: #cf8138;
+    font-weight: 600;
+}
+
+.card h3 {
+    font-size: clamp(18px, 2vw, 24px);
+    margin: clamp(8px, 1vw, 16px) 0;
+}
+
+.card-title {
+    font-size: clamp(14px, 1.2vw, 16px);
+    color: #777;
+    margin-bottom: clamp(8px, 1vw, 16px);
+}
+
+.card-subtitle {
+    font-size: clamp(14px, 1.2vw, 16px);
+    line-height: 1.6;
+    color: #555;
+}
+
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: clamp(12px, 2vw, 24px);
+    padding: 20px 0;
+}
+
+.skill-card {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    background: #2e2e2e;
+    border-radius: 50%;
+    aspect-ratio: 3/4.5;
+    padding: 20px;
+    text-align: center;
+    color: white;
+    transition: transform 0.2s;
+}
+
+.skill-card:hover {
+    transform: translateY(-6px);
+}
+
+.skill-card img {
+    width: 55%;
+    max-width: 70px;
+    height: auto;
+    filter: grayscale(100%) brightness(1.2);
+    transition: filter 0.3s;
+}
+
+.skill-card:hover img {
+    filter: none;
+}
+
+.skill-percent {
+    font-size: clamp(18px, 2.5vw, 24px);
+    font-weight: 700;
+}
+
+.skill-name {
+    font-size: clamp(11px, 1.4vw, 13px);
+    color: #aaa;
+    letter-spacing: 0.5px;
 }
 
 /* ===== MOBILE BREAKPOINT ===== */
@@ -372,6 +463,14 @@ section {
 
     .about-image {
         max-width: 260px;
+    }
+
+    .card-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .skills-grid {
+        grid-template-columns: 1fr 1fr;
     }
 }
 
