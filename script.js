@@ -1,7 +1,7 @@
 window.addEventListener("scroll", function() {
     let navbar = document.querySelector(".navbar");
 
-    if (window.scrollY > 670) {
+    if (window.scrollY > 70) {
         navbar.classList.add("scrolled");
     } else {
         navbar.classList.remove("scrolled");
@@ -29,3 +29,16 @@ const navLinks = document.querySelector(".nav-links");
 hamburger.addEventListener("click", () => {
     navLinks.classList.toggle("open");
 });
+
+const scrollBtn = document.getElementById("scrollTop");
+window.addEventListener("scroll", () => {
+    if (window.scrollY > 300) {
+        scrollBtn.classList.add("visible");
+    } else {
+        scrollBtn.classList.remove("visible");
+    }
+})
+
+scrollBtn.addEventListener("click", () => {
+    window.scrollTo({top: 0, behavior: "smooth"});
+})

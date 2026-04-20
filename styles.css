@@ -400,6 +400,33 @@ section {
     letter-spacing: 0.5px;
 }
 
+.scroll-top {
+    position: fixed;
+    bottom: 28px;
+    right: 20px;
+    width: 42px;
+    height: 42px;
+    border-radius: 10px;
+    background: #e39a7a;
+    color: white;
+    font-size: 22px;
+    border: none;
+    cursor: pointer;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s, visibility 0.3s, transform 0.3s;
+    z-index: 999;
+}
+
+.scroll-top.visible {
+    opacity: 1;
+    visibility: visible;
+}
+
+.scroll-top:hover {
+    transform: translateY(-3px);
+}
+
 /* ===== MOBILE BREAKPOINT ===== */
 @media (max-width: 768px) {
     /* show hamburger, hide nav links */
