@@ -20,8 +20,8 @@ pills.forEach(pill => {
         contents.forEach(content => content.classList.remove("active"));
         const target = pill.getAttribute("data-target");
         document.getElementById(target).classList.add("active");
-    })
-})
+    });
+});
 
 const hamburger = document.querySelector(".hamburger");
 const navLinks = document.querySelector(".nav-links");
@@ -37,8 +37,24 @@ window.addEventListener("scroll", () => {
     } else {
         scrollBtn.classList.remove("visible");
     }
-})
+});
 
 scrollBtn.addEventListener("click", () => {
     window.scrollTo({top: 0, behavior: "smooth"});
-})
+});
+
+const buttons = document.querySelectorAll(".filters button");
+const cards = document.querySelectorAll(".project-card");
+
+buttons.forEach(button => {
+    button.addEventListener("click", () => {
+        buttons.forEach(b => b.classList.remove("active"));
+        button.classList.add("active");
+
+        const filter = button.dataset.filter;
+        cards.forEach(card => {
+            const match = filter === "all" || card.dataset.category === filter;
+            card.classList.toggle("hidden", !match);
+        });
+    });
+});
