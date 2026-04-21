@@ -229,6 +229,10 @@ section {
 }
 
 .pill {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: clamp(4px, 0.8vw, 8px);
     flex: 1;
     padding: clamp(10px, 2vw, 15px) 0;
     border: none;
@@ -244,6 +248,16 @@ section {
 
 .pill.active {
     background: #e39a7a;
+}
+
+.pill-icon {
+    width: clamp(14px, 1.8vw, 18px);
+    height: clamp(14px, 1.8vw, 18px);
+    flex-shrink: 0;
+}
+
+.pill-text {
+    white-space: nowrap;
 }
 
 /* pill content panels */
@@ -910,9 +924,17 @@ section {
 /* ===== VERY SMALL SCREENS (< 400px) ===== */
 @media (max-width: 400px) {
     .pill {
-        min-width: 80px;
-        font-size: 11px;
-        padding: 10px 0;
+        min-width: 0;
+        padding: clamp(10px, 2vw, 14px) clamp(12px, 2vw, 16px);
+    }
+
+    .pill-icon {
+        width: 18px;
+        height: 18px;
+    }
+
+    .pill-text{
+        display: none;
     }
 
     .info-grid div {
