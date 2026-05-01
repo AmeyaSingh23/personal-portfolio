@@ -189,6 +189,19 @@ section {
     opacity: 0.85;
 }
 
+.btn-outline {
+    background-color: transparent;
+    border: 2px solid white;
+    color: white;
+    margin-left: 12px;
+    transition: background-color 0.2s, color 0.2s;
+}
+
+.btn-outline:hover {
+    background-color: white;
+    color: black;
+}
+
 .hero-img {
     flex: 1 1 240px;
     display: flex;
