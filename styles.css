@@ -144,34 +144,39 @@ section {
 
 .hero-container {
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
-    gap: clamp(24px, 5vw, 80px);
-    flex-wrap: wrap; /* stacks on small screens */
+    text-align: center;
+    width: 100%;
 }
 
 .hero-text {
     color: white;
-    flex: 1 1 300px;
-    min-width: 0; /* prevents flex child overflow */
+    max-width: 800px;
+    margin: 0 auto;
 }
 
 .hero-text .intro {
     font-size: clamp(14px, 2vw, 18px);
     margin-bottom: 10px;
+    color: var(--accent);
+    font-weight: 500;
 }
 
 .hero-text h1 {
-    font-size: clamp(28px, 5vw, 60px);
-    line-height: 1.2;
-    margin: 16px 0;
+    font-size: clamp(32px, 6vw, 68px);
+    line-height: 1.15;
+    margin: 20px 0;
+    font-family: 'Syne', sans-serif;
+    letter-spacing: -1px;
 }
 
-.hero-text .description { /* keeping your original typo so it matches HTML */
-    font-size: clamp(13px, 1.8vw, 16px);
-    color: #ccc;
-    margin-bottom: 24px;
-    line-height: 1.6;
+.hero-text .description {
+    font-size: clamp(14px, 1.8vw, 18px);
+    color: #aaa;
+    margin: 0 auto 36px;
+    line-height: 1.7;
+    max-width: 650px;
 }
 
 .btn {
@@ -200,22 +205,6 @@ section {
 .btn-outline:hover {
     background-color: white;
     color: black;
-}
-
-.hero-img {
-    flex: 1 1 240px;
-    display: flex;
-    justify-content: center;
-    max-width: 420px; /* caps image from getting too wide on large screens */
-}
-
-.hero-img img {
-    width: 100%;
-    max-width: 380px;
-    height: auto;
-    object-fit: contain;
-    border-radius: 20px;
-    box-shadow: 0 10px 30px rgba(255, 255, 255, 0.15);
 }
 
 /* ===== ABOUT / RESUME ===== */
@@ -922,18 +911,6 @@ section {
         display: block;
         padding: 14px 0;
         font-size: 14px;
-    }
-
-    /* hero stacks image below text */
-    .hero-container {
-        flex-direction: column-reverse; /* image on top on mobile looks nice */
-        text-align: center;
-    }
-
-    .hero-img {
-        max-width: 320px;
-        width: 100%;
-        margin: 0 auto;
     }
 
     /* about stacks image below text */
