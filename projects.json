@@ -1,0 +1,15 @@
+[
+  {
+    "repo": "AmeyaSingh23/postmortem-ai",
+    "name": "postmortem-ai",
+    "summary": "PostMortem AI",
+    "stack": [
+      "typescript",
+      "html"
+    ],
+    "positioning": "Highlight the browser-first, seven-step reasoning pipeline that turns raw incident logs into blameless postmortems, showcasing strong TypeScript skills and practical AI integration.",
+    "image_url": "",
+    "url": "https://github.com/AmeyaSingh23/postmortem-ai",
+    "updated_at": "2026-08-27T12:45:49.755265+00:00"
+  }
+]
